@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="tests">
+    <test name="Web Sample Test">
+        <classes>
+            <class name="com.toolshop.RemotePracticeTest"/>
+        </classes>
+    </test>
+    <test name="product Search Test">
+        <classes>
+            <class name="com.toolshop.HomePageTest">
+                <methods>
+                    <include name="productSearchTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
